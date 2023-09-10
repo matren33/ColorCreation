@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creation d'une couleur</title>
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/sliders.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="title-big">Veuillez choisir une couleur</h1>
+    </header>
+    <main>
+        <div class="container-main" id="catalogue-personnel-container">
+            <h2 class="title-medium text-black">Choix catalogue ou personnel</h2>
+            <div id="catalogue-personnel-radiocontainer">
+                <input type="radio" name="catalogue-personnel" id="Catalogue" value="Catalogue" checked>Catalogue
+                <input type="radio" name="catalogue-personnel" id="Personnel" value="Personnel">Personnel
+            </div>
+        </div>
+        <div class="container-main" id="choix-catalogue-container">
+            <h2 class="title-medium text-black">Choix catalogue</h2>
+            <select name="choix" id="color-chooser">
+                <option value="rouge">Rouge</option>
+                <option value="bleu">Bleu</option>
+                <option value="vert">Vert</option>
+                <option value="jaune">Jaune</option>
+            </select>
+        </div>
+        <hr>
+        <div class="container-main" id="sliders-container">
+            <h2 class="title-medium text-black">Choix de la couleur</h2>
+            <div class="color-container">
+                <div class="slider-container">
+                    <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-red">
+                    <span class="slider-value" id="slider-red-value">0</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-green">
+                    <span class="slider-value" id="slider-green-value">0</span>
+                </div>
+                <div class="slider-container">
+                    <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-blue">
+                    <span class="slider-value" id="slider-blue-value">0</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-main" id="quantity-container">
+            <h2 class="title-medium text-black">Quantité</h2>
+            <div class="quantity-container">
+                <input type="number" min="0.1" max="50" step="0.1" value="1" class="quantity" id="quantity">
+                <span class="quantity-unit">L</span>
+            </div>
+        </div>
+        <hr>
+    </main>
+    <footer>
+        <div id="form">
+            <h2 class="title-medium text-black">Vos Coordonnées</h2>
+            <form action="./index.php" method="post">
+                <div id="personnal-information">
+                    <div id="lastname-container">
+                        <label for="lastname">Nom :</label>
+                        <input type="text" id="lastname">
+                    </div>
+                    <div id="firstname-container">
+                        <label for="firstname">Prénom :</label>
+                        <input type="text" id="firstname">
+                    </div>
+                </div>
+                <div id="adress-container">
+                    <label for="adress">Adresse</label>
+                    <input type="text" id="adress">
+                </div>
+                <div id="confirm-container">
+                    <input type="submit" value="Valider">
+                    <input type="reset" value="Annuler">
+                </div>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

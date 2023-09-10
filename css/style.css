@@ -1,0 +1,173 @@
+/*CSS reset*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS basic*/
+
+body{
+    background: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+	text-align: right;
+	margin: 15px;
+}
+
+main{
+	margin: 0 auto;
+	width: 95%;
+}
+
+main > hr{
+	border: 0;
+	height: 2px;
+	background: #ccc;
+	margin: 15px 0;
+}
+
+#catalogue-personnel-radiocontainer > input{
+	margin-right: 5px;
+}
+
+.slider-container > span{
+	font-size: 1em;
+	font-weight: bold;
+	margin-left: 10px;
+	color: #333;
+	margin-right: 15px;
+}
+
+#quantity{
+	width: 50px;
+	text-align: center;
+}
+
+select#color-chooser{
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+footer{
+	text-align: right;
+	margin: 15px;
+	margin-left: 65%;
+}
+
+#personnal-information{
+	display: inline-flex;
+	margin-bottom: 10px;
+}
+
+#personnal-information > div{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#personnal-information > div > label{
+	margin-right: 5px;
+}
+
+#personnal-information > div{
+	margin-right: 15px;
+}
+
+#form > h2{
+	text-align: center;
+}
+
+#adress-container{
+	display: flex;	
+	flex-direction: column;
+
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+#confirm-container{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+#confirm-container > input{
+	margin-right: 5px;
+	border: 0px solid #ccc;
+	border-radius: 5px;
+	padding: 5px 7px;
+}
+
+/*class*/
+
+.slider-container{
+	align-items: center;
+	display: flex;
+}
+
+.container-main{
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.title-medium{
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.title-big{
+	font-size: 2em;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
