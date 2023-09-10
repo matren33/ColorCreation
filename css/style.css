@@ -49,6 +49,7 @@ table {
 body{
     background: #f2f2f2;
     font-family: 'Roboto', sans-serif;
+	transition: 0.3s;
 }
 
 header{
@@ -121,6 +122,15 @@ footer{
 	text-align: center;
 }
 
+div#color-preview{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	margin-right: 15px;
+	margin-left: 65px;
+}
+
 #adress-container{
 	display: flex;	
 	flex-direction: column;
@@ -129,6 +139,23 @@ footer{
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 15px;
+}
+
+#adress-container > input{
+	margin-bottom: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 7px;
+	width: 80%;
+	height: 45px;
+	font-size: 18px;
+}
+
+#personnal-information > div >input{
+	margin-right: 5px;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px 7px;
 }
 
 #confirm-container{
@@ -143,6 +170,24 @@ footer{
 	border-radius: 5px;
 	padding: 5px 7px;
 }
+
+#darkmode-button{
+	position : absolute;
+	top: 10px;
+	left: 10px;
+	border: 0px solid #ccc;
+	background-color: transparent;
+	transition: 0.2s;
+	border-radius: 8px;
+}
+
+#darkmode-button:hover{
+	background-color: #cfcfcfc6;	
+}
+
+.dark-mode button#darkmode-button:hover{
+	background-color: #ffffff73;
+}	
 
 /*class*/
 
@@ -170,4 +215,21 @@ footer{
 	font-weight: bold;
 	color: #333;
 	margin-bottom: 10px;
+}
+
+.dark-mode{
+	background: #333;
+	color: #fff;
+}
+
+.dark-mode > main{
+	color: black;
+}
+
+.dark-mode header h1, .dark-mode footer h2{
+	color: #fff;	
+}
+
+.dark-mode button{
+	color: #fff;	
 }

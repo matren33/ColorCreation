@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="css/style.css">    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="js/selector.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/color.js"></script>
 </head>
-<body>
+<body class="dark-mode">
     <header>
+        <button id="darkmode-button">Dark Mode</button>
         <h1 class="title-big">Veuillez choisir une couleur</h1>
     </header>
     <main>
@@ -29,7 +33,7 @@
                 <option value="jaune">Jaune</option>
             </select>
         </div>
-        <hr>
+<!--    <hr>    -->
         <div class="container-main" id="sliders-container">
             <h2 class="title-medium text-black">Choix de la couleur</h2>
             <div class="color-container">
@@ -46,6 +50,7 @@
                     <span class="slider-value" id="slider-blue-value">0</span>
                 </div>
             </div>
+            <div id="color-preview"></div>
         </div>
         <hr>
         <div class="container-main" id="quantity-container">
@@ -73,7 +78,7 @@
                 </div>
                 <div id="adress-container">
                     <label for="adress">Adresse</label>
-                    <input type="text" id="adress">
+                    <input type="search" id="adress">
                 </div>
                 <div id="confirm-container">
                     <input type="submit" value="Valider">
