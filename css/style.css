@@ -95,12 +95,14 @@ select#color-chooser{
 
 footer{
 	text-align: right;
-	margin: 15px;
-	margin-left: 65%;
+	width: 95%;
+	justify-content: right;	
+	align-items: center;
+	display: flex;
+	margin: auto;
 }
 
 #personnal-information{
-	display: inline-flex;
 	margin-bottom: 10px;
 }
 
@@ -172,9 +174,10 @@ div#color-preview{
 }
 
 #darkmode-button{
-	position : absolute;
-	top: 10px;
-	left: 10px;
+	/*position : absolute;
+	position : sticky;*/
+	/*top: 10px;
+	left: 10px;*/
 	border: 0px solid #ccc;
 	background-color: transparent;
 	transition: 0.2s;
