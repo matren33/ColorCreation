@@ -44,57 +44,75 @@ table {
 	border-spacing: 0;
 }
 
-/*CSS basic*/
+/*Basic css*/
 
 body{
-    background: #f2f2f2;
-    font-family: 'Roboto', sans-serif;
-	transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header{
-	text-align: right;
-	margin: 15px;
+    text-align: right;
+    margin: 15px;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 main{
-	margin: 0 auto;
-	width: 95%;
+    margin-left: 8px;
 }
 
-main > hr{
-	border: 0;
-	height: 2px;
-	background: #ccc;
-	margin: 15px 0;
+#darkmode-button{
+    display: none;
 }
 
-main > hr:nth-of-type(1){
-	display: none;
-}
-
-#catalogue-personnel-radiocontainer > input{
-	margin-right: 5px;
-}
-
-.slider-container > span{
-	font-size: 1em;
-	font-weight: bold;
-	margin-left: 10px;
-	color: #333;
+div#color-preview{
+	width: 150px;
+	height: 100px;
 	margin-right: 15px;
+    float: right;
+    position: absolute;
+    top: 275px;
+    right: 750px;
+    border: 2px solid black;
 }
 
-#quantity{
-	width: 50px;
+.quantity-container{
+    display: none;
+}
+
+/**/
+
+#adress-container{
+	display: flex;	
+	flex-direction: column;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 15px;
 }
 
-select#color-chooser{
-	width: 100px;
-	height: 30px;
-	border-radius: 5px;
-	border: 1px solid #ccc;
+#adress-container > input{
+	margin-bottom: 5px;
+	border: 1px solid black;
+	padding: 5px 7px;
+	width: 80%;
+	height: 45px;
+	font-size: 18px;
+    background-color: #04fbf9;
+    resize: vertical;
+}
+
+#personnal-information > div >input{
+	margin-right: 5px;
+	border: 1px solid black;
+	padding: 5px 7px;
+    background-color: #04fbf9;
+}
+
+#confirm-container{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 footer{
@@ -128,88 +146,18 @@ footer{
 	text-align: center;
 }
 
-div#color-preview{
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 1px solid #ccc;
-	margin-right: 15px;
-	margin-left: 44.5px;
-}
-
-#adress-container{
-	display: flex;	
-	flex-direction: column;
-
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 15px;
-}
-
-#adress-container > input{
-	margin-bottom: 5px;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 5px 7px;
-	width: 80%;
-	height: 45px;
-	font-size: 18px;
-}
-
-#personnal-information > div >input{
-	margin-right: 5px;
-	border: 1px solid black;
-	border-radius: 5px;
-	padding: 5px 7px;
-}
-
-#confirm-container{
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-}
-
-#confirm-container > input{
-	margin-right: 5px;
-	border: 0px solid #ccc;
-	border-radius: 5px;
-	padding: 5px 7px;
-}
-
-#quantity-old{
-	display: none;
-}
-
-#darkmode-button{
-	/*position : absolute;
-	position : sticky;*/
-	/*top: 10px;
-	left: 10px;*/
-	border: 0px solid #ccc;
-	background-color: transparent;
-	transition: 0.2s;
-	border-radius: 8px;
-}
-
-#darkmode-button:hover{
-	background-color: #cfcfcfc6;	
-}
-
-.dark-mode button#darkmode-button:hover{
-	background-color: #ffffff73;
-}	
-
 /*class*/
 
 .slider-container{
 	align-items: center;
 	display: flex;
+    outline: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    margin: 5px 0px;
 }
 
 .container-main{
-	background: #fff;
-	padding: 15px;
 	margin-bottom: 15px;
 	border-radius: 5px;
 }
@@ -229,18 +177,10 @@ div#color-preview{
 }
 
 .dark-mode{
-	background: #333;
+	background: #b9cfdc;
 	color: #fff;
 }
 
 .dark-mode > main{
 	color: black;
-}
-
-.dark-mode header h1, .dark-mode footer h2{
-	color: #fff;	
-}
-
-.dark-mode button{
-	color: #fff;	
 }

@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creation d'une couleur</title>
-    <link rel="stylesheet" href="css/style.css">    
+    <!-- <link rel="stylesheet" href="css/old.css"> -->
+    <link rel="stylesheet" href="css/style.css">  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/sliders.js"></script>
     <script src="js/selector.js"></script>
     <script src="js/darkmode.js"></script>
     <script src="js/color.js"></script>
+    <!-- <script src="./js/hexa.js"></script> -->
     <link rel="icon" href="./img/colorlogo.PNG" type="image/icon type">
 </head>
 <body class="dark-mode">
@@ -34,19 +36,19 @@
                 <option value="jaune">Jaune</option>
             </select>
         </div>
-<!--    <hr>    -->
+        <hr><!--Facultatif-->
         <div class="container-main" id="sliders-container">
             <h2 class="title-medium text-black">Choix de la couleur</h2>
             <div class="color-container">
-                <div class="slider-container">
+                <div class="slider-container">Rouge
                     <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-red">
                     <span class="slider-value" id="slider-red-value">0</span>
                 </div>
-                <div class="slider-container">
+                <div class="slider-container">Vert
                     <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-green">
                     <span class="slider-value" id="slider-green-value">0</span>
                 </div>
-                <div class="slider-container">
+                <div class="slider-container">Bleu
                     <input type="range" min="0" step="5" max="255" value="0" class="slider" id="slider-blue">
                     <span class="slider-value" id="slider-blue-value">0</span>
                 </div>
@@ -59,6 +61,14 @@
             <div class="quantity-container">
                 <input type="number" min="0.1" max="50" step="0.1" value="1" class="quantity" id="quantity">
                 <span class="quantity-unit">L</span>
+            </div>
+            <div class="quantity-container-old">
+                <select name="choix" id="quantity-old">
+                    <option value="0.5">0.5 litre</option>
+                    <option value="1">1 litre</option>
+                    <option value="1.5">1.5 litres</option>
+                    <option value="2">2 litres</option>
+                </select>
             </div>
         </div>
         <hr>
