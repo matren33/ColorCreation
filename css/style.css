@@ -233,7 +233,7 @@ div#color-preview{
 	color: #fff;
 }
 
-.dark-mode > main{
+.dark-mode main{
 	color: black;
 }
 
