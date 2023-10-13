@@ -32,7 +32,7 @@
         echo "<p>Couleur : $colorChooser</p></div>";
     }/*else echo sliders*/
     else{
-        echo "<h2>Personnel</h2><div>";
+        echo "<h1>Personnel</h1><div>";
         echo "<p>Quantite: $quantity</p>";
         echo "<p>Bleu : $sliderBlue</p>";
         echo "<p>Vert : $sliderGreen</p>";
