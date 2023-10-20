@@ -41,7 +41,7 @@
     /*Get catalogue / perso*/
     $cataloguePersonnel = $_POST['catalogue-personnel'];
 
-    echo "<div><h1>Informations Personnel</h1><div>";
+    echo "<div><h1>Informations Personnelles</h1><div>";
     echo "<p>Prenom : $firstName</p>";
     echo "<p>Nom : $lastName</p>";
     echo "<p>Addresse: $address</p></div>";
@@ -75,7 +75,7 @@
 
     $bdd = new mysqli("$servername", "$username", "$password", "$dbname");
     if ($bdd->connect_errno) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Connection failed: " . $bdd->connect_error);
     }
 
     $requete = "SELECT * FROM CLIENT";
@@ -91,7 +91,7 @@
     if (mysqli_query($bdd, $requete)) {
         echo " New record created successfully";
     } else {
-        echo " Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
     }
 
     /*Ajout des couleurs*/
@@ -99,8 +99,76 @@
     if (mysqli_query($bdd, $requete)) {
         echo " New record created successfully";
     } else {
-        echo " Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
     }
+
+    /*calcul litre de CMJN besoin*/
+    $c = ($c/100) * $quantity;
+    $m = ($m/100) * $quantity;
+    $y = ($y/100) * $quantity;
+    $k = ($k/100) * $quantity;
+    
+    $requete = "UPDATE STOCK SET cyan = cyan - $c";
+    if (mysqli_query($bdd, $requete)) {
+        echo " New record created successfully";
+    } else {
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
+    }
+
+    $requete = "UPDATE STOCK SET magenta = magenta - $m";
+    if (mysqli_query($bdd, $requete)) {
+        echo " New record created successfully";
+    } else {
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
+    }
+
+    $requete = "UPDATE STOCK SET yellow = yellow - $y";
+    if (mysqli_query($bdd, $requete)) {
+        echo " New record created successfully";
+    } else {
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
+    }
+
+    $requete = "UPDATE STOCK SET black = black - $k";
+    if (mysqli_query($bdd, $requete)) {
+        echo " New record created successfully";
+    } else {
+        echo " Error: " . $sql . "<br>" . mysqli_error($bdd);
+    }
+
     echo "-->"
+    /*
+    CREATE TABLE CLIENT(
+        idClient INT PRIMARY KEY,
+        nom VARCHAR(30),
+        prenom VARCHAR(30),  
+        adresse VARCHAR(60)
+    );
+    CREATE TABLE COMMANDE (
+        idCommande INT PRIMARY KEY,
+        idClient INT,
+        red SMALLINT NOT NULL,
+        green SMALLINT NOT NULL,
+        blue SMALLINT NOT NULL,
+        cyan DECIMAL(5,2) NOT NULL,
+        magenta DECIMAL(5,2) NOT NULL,
+        yellow DECIMAL(5,2) NOT NULL,
+        black DECIMAL(5,2) NOT NULL,
+        quantite DECIMAL(5,2) NOT NULL,
+        FOREIGN KEY (idClient) REFERENCES CLIENT(idClient)
+    );
+    CREATE TABLE STOCK (
+        idStock INT PRIMARY KEY,
+        cyan REAL NOT NULL,
+        magenta REAL NOT NULL,
+        yellow REAL NOT NULL,
+        black REAL NOT NULL,
+    );
+    INSERT INTO CLIENT VALUES(1,"Rolda","Pierre","rue de samodie");
+    INSERT INTO CLIENT VALUES(2,"Toulou","Pascal","rue de la majoet");
+    INSERT INTO COMMANDE VALUES(1,1,20,40,60,66.7,33.3,0,76.5,25);
+    INSERT INTO COMMANDE VALUES(2,2,20,40,60,66.7,33.3,0,76.5,6.5);
+    INSERT INTO STOCK VALUES(1,20000,4000,600,6006.7);
+    */
     ?>
 </html>
