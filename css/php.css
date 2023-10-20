@@ -56,6 +56,7 @@ body{
     /*size of a screen*/
     height: 100vh;
     width: 100vw;
+    text-align: center;
 }
 
 /*Faire animation slide to bottom*/
@@ -85,14 +86,24 @@ body > div{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     background: #fff;
     width: 40%;
-    height: 50%;
+    height: 65%;
     /*aligner centre haut*/
     top: 0%;
+    text-align: center;
 }
 
 /*h1 title*/
 h1{
     font-size: 2.5rem;
+    font-weight: 500;
+    color: #d47a30;
+    margin-bottom: 1.2rem;
+    margin-top: 2rem;
+}
+
+/*h3 title*/
+h3{
+    font-size: 1.5rem;
     font-weight: 500;
     color: #333;
     margin-bottom: 1.2rem;
